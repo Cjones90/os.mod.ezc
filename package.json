@@ -1,0 +1,12 @@
+{
+    "name": "ezc",
+    "version": "0.7.0",
+    "dependencies": { },
+    "devDependencies": { },
+    "scripts": {
+        "swarm": "ezc swarm"
+    },
+    "bin": {
+        "ezc": "index.js"
+    }
+}
