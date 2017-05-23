@@ -10,7 +10,7 @@ module.exports = function(settings, config, args) {
         process.exit(0)
     }
 
-    let swarmManagerIp = config.SWARM_MANAGER_IP.split("@")[1];
+    // let swarmManagerIp = config.SWARM_MANAGER_IP.split("@")[1];
 
     function buildSwarmImages() {
         let swarmIps = config.SWARM_WORKER_IPS.slice();
@@ -19,7 +19,7 @@ module.exports = function(settings, config, args) {
         let env = args[2] ? args[2] : "prod";
 
         return swarmIps.map((ip) => {
-            return run(`ssh`, [`${ip}`, `set -e;
+            return run(`docker-machine`,[`ssh`, `${ip}`, `set -e;
             cd ~/${config.SERVER_DIR_NAME};
             git fetch;
             git reset --hard origin/master;

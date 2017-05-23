@@ -1,4 +1,7 @@
 
+## Do not use
+Better swarm implementation at [configs](https://bitbucket.org/JestrJ/configs.git)
+
 # Download Docker **[here](https://www.docker.com/)**
 
 Dev & Production system require:
@@ -15,4 +18,4 @@ Was used to house DB administration tools, deployment tools, project management 
 Required too much dependency on a single node module. That doesn't fit with a
 micro services architecture and multiple languages, where node is required for projects.  
 
-See <strong>[kc-configs](https://bitbucket.org/JestrJ/kc-configs.git)</strong> for such tools that were extracted from this module into a bash script (which it was originally converted from a bash script, and needs to be modularized)
+See <strong>[configs](https://bitbucket.org/JestrJ/configs.git)</strong> for such tools that were extracted from this module into a bash script (which it was originally converted from a bash script, and needs to be modularized)

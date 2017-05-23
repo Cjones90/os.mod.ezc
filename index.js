@@ -4,9 +4,9 @@
 
 const fs = require("fs");
 const path = require("path");
-const db = require("./commands/db.js");
-const help = require("./commands/help.js");
-const upgrade = require("./commands/upgrade.js");
+// const db = require("./commands/db.js");
+// const help = require("./commands/help.js");
+// const upgrade = require("./commands/upgrade.js");
 const swarm = require("./commands/swarm.js");
 
 try { fs.statSync(process.cwd()+"/ezc.config.js") }
@@ -50,12 +50,12 @@ if (config.DB_TYPE === "postgres") {
 settings.PORTS = `${settings.CONTAINER_PORT}:${settings.CONTAINER_PORT}`    // What ports to use/expose    HOST:CONTAINER to map host to docker instance
 
 switch(args[0]) {
-    case "db": db(settings, config, args)
-    break;
-    case "help": help(settings, config, args)
-    break;
-    case "upgrade": upgrade(settings, config, args)
-    break;
+    // case "db": db(settings, config, args)
+    // break;
+    // case "help": help(settings, config, args)
+    // break;
+    // case "upgrade": upgrade(settings, config, args)
+    // break;
     case "swarm": swarm(settings, config, args)
     break;
     default: console.log("Usage: ezc {db {start|dump|import|reload}}");
